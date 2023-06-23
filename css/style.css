@@ -2,6 +2,10 @@
 :root{
     --softBlue: #67B6FF;
     --darkBlue: #1877F2;
+    --softGray: #F2F4F8;
+    --white: #ffffff;
+    --black: #0000000;
+    --linesColor : #DDE1E6;
     --fuentePrincipal: 'Roboto', sans-serif;
 }
 /* Globals */
@@ -19,6 +23,7 @@ body{
 }
 /* Utilities */
 .text-center{text-align: center;}
+.text-left{text-align: left;}
 
 /* end utilities */
 h1{
@@ -27,7 +32,8 @@ h1{
     font-size: 700;
 }
 a{
-
+    text-decoration: none;
+    color: var(--black);
 }
 img{
     max-width: 100%;
@@ -87,22 +93,58 @@ img{
 }
 
 .form{
-
+    height: 40rem;    
 }
 .form__fieldset{
     border: none;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
 }
 .form__item{
     display: flex;
     flex-direction: column;
-
+    align-items:flex-start;
+}
+.form__label{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.form__input{
+    width: 45rem;
+    padding: .8rem;
+    background-color: var(--softGray);
+    border: none;
+}
+.checkbox{
+    align-self: center;
+    width: 45rem;
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1rem;
+.main__button{
+    display: inline-block;
+    width: 45rem;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    padding: .8rem;
+    font-weight: bold;
 }
-.grid__item{
-        background-color: var(--softBlue);
+.forgot--password{
+    width: 45rem;
+    margin: 0 auto;
+    border-bottom: solid .2rem var(--linesColor);
+}
+.forgot--password p{
+    font-size: 2.2rem;
+}
+.forgot--password  a {
+    color: var(--darkBlue);
+}
+.Account--register{
+    margin-top: 4rem;
+
 }
