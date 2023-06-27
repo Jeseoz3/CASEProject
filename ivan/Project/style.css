@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: #67b6ff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.btn {
+    background-color: white;
+    width: 750px;
+    height: 45px;
+    padding: 0 10px 0 45px; /* Espacio lupa */
+    border-radius: 30px;
+    position: relative;
+}
+
+.buscar {
+    position: relative;
+}
+
+.lupa {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.lupa img {
+    width: 45px;
+    height: 40px;
+}
+
+input.btn::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 65px; /* Cambiar separación */
+    transform: translateY(-50%);
+    font-family: Arial, sans-serif; /* Cambiar "Arial" fuente */
+    font-size: 28px; /* Cambiar el tamaño de la fuente */
+    color: gray; /* Color fuente */
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+}
