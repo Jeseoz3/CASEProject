@@ -9,6 +9,10 @@
     --fuentePrincipal: 'Roboto', sans-serif;
 }
 /* Globals */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -24,6 +28,7 @@ body{
 /* Utilities */
 .text-center{text-align: center;}
 .text-left{text-align: left;}
+.text-right{text-align: right;}
 
 /* end utilities */
 h1{
@@ -47,30 +52,120 @@ img{
 .nav-main{
     width: 100%;
     height: auto;
-    background-color: #67B6FF;
+    /* background-color: #67B6FF; */
 
 }
 .container__list{
+    padding: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 .container__list .list__item{
     list-style: none;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+}
+@media (min-width:768px){
+    .container__list .link__item{
+        font-size: 2rem;
+    }
 }
 .main__container{
     display: grid;
-    grid-template-areas: "main main aside"
-                         "main main aside"
-                         "main main aside";
+    grid-template-areas: "main main aside aside"
+                         /* "main main aside"
+                         "main main aside"; */
 
 }
 .main{
     grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+    justify-items: center;
+    align-self: center;
+}
+
+@media (min-width: ){
+    
+}
+@media (min-width: 768px){
+    .main{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width: 992px){
+    .main{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .product{
+        width: 18rem;
+    }
 }
 .aside{
     grid-area: aside;
+    border-left: solid .3rem var(--linesColor);
+    /* background-color: var(--linesColor); */
+}
+.product img {
+    width: 20rem;
+}
+
+.product{
+    width: 20rem;
+}
+
+.product__link{
+
+}
+.product__info{
+    margin-top: -4rem;
+}
+.product__info p{
+    margin-top: -2rem;
+    padding-right: 5rem;
+}
+
+.aside h3{
+    font-size: 2.2rem;
+}
+.aside .product__selected img{
+    width: 5rem;
+}
+@media (min-width: 768px){
+    .aside .product__selected img{
+        width: 10rem;
+    }
+}
+@media (min-width: 992px){
+    .aside .product__selected img{
+    }
+}
+.aside .product__selected{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.aside .product__selected a{
+    background-color: var(--darkBlue);
+    color: var(--white);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    padding: .5rem;
+    border-radius: 10rem;
+    width: 10rem;
+}
+@media (min-width: 768px){
+    .aside .product__selected a {
+        width: 15rem;
+
+    }
+}
+@media (min-width: 992px){
+    .aside .product__selected a {
+        width: 20rem;
+
+    }
 }
 
 
@@ -150,5 +245,131 @@ img{
 }
 .Account--register{
     margin-top: 4rem;
+}
+
+
+
+.form{
+    height: 35rem;    
+}
+.register{
+    height: 40rem;
+}
+.form__fieldset{
+    border: none;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+.form__item{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.form__label{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.form__input{
+    width: 60rem;
+    padding: .8rem;
+    background-color: var(--softGray);
+    border: none;
+}
+.form__half{
+    width: 60rem;
+    display: flex;
+    justify-content: space-between;
+}
+.form__half .form__item{
+    width: 30rem;
 
 }
+.form__half .form__label{
+    width: 29.5rem;
+}
+.form__half .form__input--half{
+    width: 29.5rem;
+
+}
+.form__item--last{
+    margin-left: 1rem;
+}
+.checkbox{
+    align-self: center;
+    width: 60rem;
+}
+
+.main__button{
+    display: inline-block;
+    width: 60rem;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    padding: .8rem;
+    font-weight: bold;
+}
+.forgot--password{
+    width: 60rem;
+    margin: 0 auto;
+    border-bottom: solid .2rem var(--linesColor);
+}
+.forgot--password p{
+    font-size: 2.2rem;
+}
+.forgot--password  a {
+    color: var(--darkBlue);
+}
+.Account--register{
+    margin-top: 4rem;
+}
+.form .register{
+    background-color: var(--softBlue);
+}
+
+.signup p{
+    width: 60rem;
+    margin: 2rem auto;
+    padding-top: 2rem;
+    border-top: solid .2rem var(--linesColor);
+}
+
+.signup__container{
+    display: flex;
+    flex-direction: column;
+        border-bottom: solid .2rem var(--linesColor);
+
+}
+.signip__list{
+    padding: 0;
+}
+.signup ul li{
+    list-style: none;
+}
+.list__item{
+    /* padding: 1rem; */
+    margin-bottom: 1rem;
+
+}
+.secondary__button{
+    width: 60rem;
+    display: inline-block;
+    border: solid .2rem var(--darkBlue);
+    border-radius: 1rem;
+    color: var(--darkBlue);
+    font-size: 1.6rem;
+}
+.link__list{
+    height: auto;
+    text-align: center;
+}
+.button__icon{
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    padding: .5rem;
+}
+
